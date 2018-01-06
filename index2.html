@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Lógica Proposicional</title>
+        <script type="text/javascript" src="js/newjavascript.js"></script>
+        <style>
+            /*Son los botones negros*/
+            input[type="button"],[type="submit"]{
+            width: 100%;
+            height: 115%;
+            font-size: 20px;
+            color: white;
+            background: black;
+            border-style: solid;
+            border-radius: 10px;
+            font-family: "Segoe Print",monospace;
+            }
+            /*Campo de texto para la expresion*/
+            input[type="text"]{
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+                border-radius: 8px;
+                border-style: hidden;
+                font-family: monospace;
+            }
+            /*Para la tabla*/
+            table,form{
+                width: 500px;
+                height: 400px;
+                text-align: center;
+                padding-top: 5px;
+                padding-right:5px;
+                padding-bottom: 5px;
+                border-radius: 10px;
+                margin: 0 auto;
+            }
+            /*Todo negrita*/
+            div{
+                padding: 10px;       
+                font-family: "Segoe Print",monospace;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            /*Se le da un tipo de letra General*/
+            h1{
+                font-family: "Segoe Print",monospace;              
+            }
+            label,legend{
+                color: white;
+                font-family: "Segoe Print",monospace;
+            }
+            fieldset{
+                 border-color: white;
+                 border-style: double;
+                 border-radius: 12px;
+            } 
+            #tableFinal{
+                width:220px;
+                height:200px;
+                border: black 5px solid;
+                border-spacing: 0px;
+                border-radius: 8px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#ffeecc">  
+        
+        <form name="fo">          
+            
+        <img src="images/LogoSanbue.png" ALIGN="left"/>
+        <h1>Calculadora Lógica Proposicional</h1>
+        
+        <table style="border: black 6px solid;" bgcolor="#E07E1D" cellspacing="5">
+            <tr>
+                <!--Es la parte de las expresion-->
+                <td><font face="Segoe Print" size="4" color="white"><strong>Expresión:</strong></font></td>
+                <td colspan="4"><input type="text" name="valores" id="valores" readonly="readonly"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td>
+            </tr>
+            
+            <tr>
+                <!--Solo es una columna con los radio button--> 
+               <td colspan="5">
+                    <fieldset name="valoresVerdad">
+                        <legend><strong>Valores de Verdad</strong></legend>                      
+                        <input type="radio" name="valor" id="valorVerdadP" value="p" checked="checked"/>
+                        <label for="valorVerdadP">P</label>
+                        <input type="text" name="value" id="valueOfP" style="width:13%"/> 
+                        
+                        <input type="radio" name="valor" id="valorVerdadQ" value="q"/>
+                        <label for="valorVerdadQ">Q</label>
+                        <input type="text" name="value" id="valueOfQ" style="width:13%"/>
+                        
+                        <input type="radio" name="valor" id="valorVerdadR" value="r"/>
+                        <label for="valorVerdadR">R</label>
+                        <input type="text" name="value" id="valueOfR" style="width:13%"/>
+                        
+                        <input type="radio" name="valor" id="valorVerdadS" value="s"/>
+                        <label for="valorVerdadS">S</label>
+                        <input type="text" name="value" id="valueOfS"style="width:13%"/>                             
+                    </fieldset> 
+               </td>
+            </tr>
+            
+            <!--Se le pone un raya blanca-->
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td>
+            </tr>
+            
+            <!--Son varias columnas que se imprimien en total 3 columnas -->
+            <tr>
+                <td><input type="button" value="p" onClick="retornar(value,'p')"></td>
+                <td width="100px"><input type="button" value="q" onClick="retornar(value,'q')"></td>
+                <td width="100px"><input type="button" value="r" onClick="retornar(value,'r')"></td>
+                <td width="100px"><input type="button" value="s" onClick="retornar(value,'s')"></td>
+                <td width="100px"><input type="button" value="(" onClick="retornar(value,'(')"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="&#652" onClick="retornar(value,'&')"></td>
+                <td><input type="button" value="∨" onClick="retornar(value,'|')"></td>
+                <td><input type="button" value="&RightArrow;" onClick="retornar(value,'>')"></td>
+                <td><input type="button" value="&not" onClick="retornar(value,'!')"></td>
+                <td><input type="button" value=")" onClick="retornar(value,')')"></td>
+            </tr>
+                       
+            <tr>
+                <td><input type="button" value="+" onClick="retornar(value,'+')"></td>
+                <td><input type="button" value="&LeftRightArrow;" onClick="retornar(value,'<')"></td>
+                <th><font face="Segoe Print" size="4" color="white">Valores:</font></th>
+                <td><input type="button" name="true" value="true" onClick="switchValue(value)"></td>
+                <td><input type="button" name="false" value="false" onClick="switchValue(value)"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="DEL" onClick="eliminar()"></td>
+                <td><input type="button" value="Borrar" onClick="limpiarTextField()"></td>
+                <td colspan="3"><input type="button" value="Calcular" id="calcular" onclick="(new Calcular()).calcular()"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td>
+            </tr>
+            
+            <tr>
+                <th><font face="Segoe Print" size="4" color="white">Resultado:</font></th>
+                <td colspan="4"><input type="text" name="resultado" id="resultado" ></td>               
+            </tr>
+                        
+        </table>            
+        </br>          
+        <div ALIGN="center">                                   
+            <input type="button" style="width:40%" value="Tabla" id="tabla" onclick="crearTabla()"/>
+        </div>
+       
+        <div>
+            <label style="color:black;">INSTRUCCIONES</label>
+            <p align="justify" style="font-size:16px;">
+                La calculadora de lógica proposicional admite hasta cuatro proposiciones atómicas diferentes.
+                Además, permite ingresar cualquier expresión a evaluar, brindando también
+                la posibilidad de visualizar su tabla de verdad. Todas las proposiciones inicialmente
+                son verdaderas; es decir, P=Q=R=S=True.
+            </p>      
+        </div>
+        
+         <table id="tableFinal" border="1" bgcolor="white">
+            <thead>
+                <tr>
+                    <th><label style="color:black;font-size:15px;">Operador Lógico</label></th>
+                    <th><label style="color:black;font-size:15px;">Símbolo</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label style="color:black">Conjunción</label></td>
+                    <td><label style="color:black">&#652;<strong></strong></label></td>
+                </tr>
+                <tr>
+                    <td><label style="color:black">Disyunción</label></td>
+                    <td><label style="color:black">∨</label></td>
+                </tr>
+                <tr>
+                    <td><label style="color:black">Dis. Exclusiva</label></td>
+                    <td><label style="color:black">+</label></td>
+                </tr>
+                <tr>
+                    <td><label style="color:black">Condicional</label></td>
+                    <td><strong></strong>&RightArrow;</td>
+                </tr>
+                <tr>
+                    <td><label style="color:black">Bicondicional</label></td>
+                    <td><strong></strong>&LeftRightArrow;</td>
+                </tr>
+                <tr>
+                    <td><label style="color:black">Negación</label></td>
+                    <td><strong></strong>&not;</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <footer ALIGN="center">
+            <small>
+                <br/>Copyright &copy; 2016<br/>
+                Actualizado en: 11 Marzo 2016
+            </small>
+        </footer>
+        </form>        
+    </body>
+</html>

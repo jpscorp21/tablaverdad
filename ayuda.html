@@ -1,0 +1,123 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="es">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Tabla de la verdad</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Acme|Questrial" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    p{
+      text-align: justify;
+    }
+  </style>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="index.html">Tabla de la Verdad</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="informacion.html">información</a></li>        
+          <li class="active"><a href="ayuda.html">Ayuda</a></li>
+          <li><a href="#">Salir</a></li>        
+        </ul>         
+    </div>
+  </nav> 
+
+  <!-- PRINCIPAL -->
+  <section id="instruccion">
+    <div class="container-fluid">
+      <h1 class="text-center">Ayuda</h1>
+      <p class="lead">La sección ayuda incluye la información de referencia necesaria para manejar y comprender plenamente los botones y menús que provee la aplicación.</p>
+      <p class="lead">La aplicación consiste en una calculadora que resuelve problemas de lógica, generando una tabla de la verdad posteriormente. Esta compuesta por una barra de navegación, un campo de texto para la expresión, botones para cargar en la expresión y un tabla con los resultados,</p>
+      
+      <h2 class="text-center">Barra de navegación</h2>
+      
+        <img class="center-block" src="img/barra.PNG" alt="barra" width="80%" height="80%"><br>
+        <img class="center-block" src="img/barra2.PNG" width="40%" height="40%" alt="Barra Responsive">      
+      <br>      
+      <p class="lead">La barra de navegación proporciona al usuario la posibilidad de acceso a varias opciones en las que son el inicio, la información y la ayuda</p>
+      <p class="lead">En dispositivos más pequeños la barra de navegación tendra la forma como de la segunda imagen</p>
+      <p class="lead">Para interactuar con la barra de navegación solo se debe de hacer click sobre la opción deseada y en el caso de los dispositivos tactiles, presionarlo</p>
+      <p class="lead">A continuación se describira la acción asociada a cada opción</p>
+      <p class="lead"><b>Tabla de la Verdad. </b> Redirige al inicio de la aplicación</p>
+      <p class="lead"><b>informacion. </b> Redirige a la sección de información</p>
+      <p class="lead"><b>Ayuda. </b> Redirige a la sección de Ayuda</p>
+
+      <h2 class="text-center">Campo de texto de la Expresión</h2>
+      <img class="center-block" src="img/expresion.PNG" alt="barra" width="40%" height="40%"><br>
+      <p class="lead">En el campo de texto de la expresión contendrá la expresión correspondiente a ser calculado. Dicho campo permanece desactivado, la única forma de interactuar es mediante el uso de los botones que provee la aplicación </p>
+      <h2 class="text-center">Botones</h2>
+      <img class="center-block" src="img/botones.PNG" alt="Botones" width="20%" height="20%">
+      <br>
+      <p class="lead">Cada botón tiene similitud con los botones de los programas de escritorio de Windows, ya que están programados esperando la acción por parte de la interactividad del usuario.</p>
+      <p class="lead">Para interactuar con los botones solo se debe de hacer click con el mouse, o en el caso de un dispositivo táctil, se pueden acceder tocando el botón.</p>
+      <p class="lead">Existen eventos asociados a cada botón que en su mayoria repercutirá al campo de texto en donde irá la expresión. A continuación se describirá cada uno de los eventos.</p>
+      <p class="lead"><b>P. </b> Carga en el campo de texto con el simbolo P</p>
+      <p class="lead"><b>Q. </b> Carga en el campo de texto con el simbolo Q</p>
+      <p class="lead"><b>R. </b> Carga en el campo de texto con el simbolo R</p>
+      <p class="lead"><b>S. </b> Carga en el campo de texto con el simbolo S</p>
+      <p class="lead"><b>¬. </b> Carga en el campo de texto con el conector lógico de negación ¬</p>
+      <p class="lead"><b>^. </b> Carga al campo de texto con el conector lógico de conjunción ^</p>
+      <p class="lead"><b>v. </b> Carga al campo de texto con el conector lógico de disyunción inclusiva v</p>
+      <p class="lead"><b>w. </b> Carga al campo de texto con el conector lógico de disyunción exclusiva w</p>
+      <p class="lead"><b>→. </b> Carga al campo de texto con el conector lógico condicional →</p>
+      <p class="lead"><b>↔. </b> Carga al campo de texto con el conector lógico bicondicional ↔</p>
+      <p class="lead"><b>(. </b> Carga al campo de texto con el parentesís de apertura (</p>
+      <p class="lead"><b>). </b> Carga al campo de texto con el parentesís de cierre )</p>
+      <p class="lead"><b>DEL. </b> Borra el último carácter ingresado en el campo de texto</p>
+      <p class="lead"><b>Borrar. </b> Borra todos los carácteres del campo de texto</p>
+      <p class="lead"><b>Resolver. </b> Resuelve la expresión cargada en el campo texto, y luego cuando finaliza, genera una tabla de verdad hacia abajo</p>
+      
+      <h2 class="text-center">Tabla de la Verdad</h2>
+      <img class="center-block" src="img/tabla.PNG" alt="barra" width="70%" height="70%"><br>
+      <p class="lead">La aplicación genera una tabla de la verdad despues de que el usuario presioné el Botón <b>Resolver</b>. La tabla presenta un encabezado haciendo referencia a los simbolos con o sin conector lógico. Según el encabezado se va formando la parte del cuerpo de la tabla, rellenandose con V o F en función a la expresión dada en el encabezado </p>
+      <p class="lead">Luego más abajo hay un botón llamado <b>eliminar tabla</b>, en donde su función es eliminar la tabla generada.</p>
+    </div>    
+  </section>
+
+  <!-- FORMULARIO -->
+        
+
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+    
+</body>
+
+</html>

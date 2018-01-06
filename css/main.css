@@ -1,0 +1,187 @@
+body {
+    background: url("../img/fondo3.jpg") no-repeat fixed;
+    background-size: cover;
+    font-family: 'Amaranth', sans-serif; 
+           
+}
+
+/*** Barra de navegacion ***/
+
+.navbar-default li{
+    font-size: 1.3em;
+}
+
+.navbar-brand {
+    font-size: 1.4em;
+}
+
+
+.navbar {
+    background:  #635D4C !important;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.navbar-default .navbar-toggle span.icon-bar {
+    background-color: #fff !important;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: letter-spacing 0.5s;
+}
+
+.navbar li a:hover, .navbar li a:focus .navbar li.active a {
+    color: #635D4C !important;
+    background: #fff !important; 
+    letter-spacing: 4px;
+}
+
+.navbar li.active a:visited {
+    color: #635D4C !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #fff;
+    color: #635D4C !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+    background-image: none !important;
+    background-color: #fff;
+}
+
+/*** PRINCIPAL ***/
+#principal, #instruccion{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+#title h1{
+    font-size: 3.2em;
+}
+
+/*** FORMULARIO ***/
+label#lb_expresion{
+    font-size: 1.1em;
+}
+
+input#expresion {
+    background-color: white;
+}
+
+#formulario {
+    border: 2px solid #333;        
+    padding: 20px;
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+#botones{
+                font-family: 'Questrial', sans-serif;
+                font-weight: bold;
+                font-size: 1.6em;
+                width: 10%;
+                height: 200px;
+                text-align: center;
+                padding-top: 5px;
+                padding-right:5px;
+                padding-bottom: 5px;
+                border-radius: 10px;
+                margin: auto;
+}
+
+#botones .btn.btn-default, #botones .btn.btn-danger  {    
+    width: 80px;
+    box-shadow: 0 6px #555;    
+}
+
+#botones .btn.btn-default:active, #botones .btn.btn-danger:active  {    
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#botones .btn.btn-default{
+    background: none;
+    /*background-color: #6C5F34 !important;*/
+    /*background-color: #6C6755;*/
+    background-color: #635D4C;
+    border: none;
+    border: 2px solid #333;
+    border-radius: 5px;     
+    color: white;
+    font-size: 0.8em;
+}
+
+#botones #btnBorrar, #botones #btnResolver {
+    width: 100%;
+}
+
+#tabla {
+    padding-top: 10px;
+    font-family: 'Questrial', sans-serif;    
+}
+
+#tabla .table-bordered tbody tr td, #tabla .table-bordered thead tr th { 
+    border: 1px solid black;   
+}
+
+#tabla thead th{
+    background-color: #635D4C;
+    color: white;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    text-align: center;
+    
+}
+
+#btnEliminarTabla{
+    background: none;
+    background-color: #635D4C !important;
+    border: none;
+    border: 2px solid #333;
+    border-radius: 5px;     
+    color: white;
+    font-size: 0.8em;
+}
+
+tr{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 350px) {
+    #botones .btn.btn.btn-default, #botones #btnBorrar, #botones #btnResolver{
+        width: 70px;
+        font-size: 0.7em;        
+    }
+}
+
+@media screen and (min-width: 450px) {
+    #formulario {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

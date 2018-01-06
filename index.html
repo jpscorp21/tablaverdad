@@ -1,0 +1,141 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="es">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Tabla de la verdad</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Acme|Questrial" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  </style>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="index.html">Tabla de la Verdad</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="informacion.html">información</a></li>        
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="#">Salir</a></li>        
+        </ul>         
+    </div>
+  </nav> 
+
+  <!-- PRINCIPAL -->
+  <section id="principal">
+    <div class="container-fluid">
+      <div id="title" class="text-center"><h1>Tabla de la Verdad</h1></div>
+    </div>    
+  </section>
+
+  <!-- FORMULARIO -->
+  <section id="formulario">
+    <div class="container">
+      <form>
+        <div class="row">
+          <!--<div class="col-sm-3">
+            <p class="lead">Cantidad de variables:</p>
+            <p class="lead">(p) <input type="radio" id="var1" name="variable" value="1" checked> <br>
+            (p, q) <input type="radio" id="var2" name="variable" value="2"> <br>
+            (p, q, r) <input type="radio" id="var3" name="variable" value="3"> <br>
+            (p, q, r, s) <input type="radio" id="var4" name="variable" value="4"> <br></p>            
+          </div>-->
+          <!--<div class="col-sm-6">
+            <h3 class="text-center">Instrucciones</h3>
+          </div>-->
+          <div class="col-sm-12">                      
+            <p class="lead text-center"><label for="lb_expresion" id="lb_expresion">Expresion: </label> <input type="text" id="expresion" name="expresion" size="25" disabled></p>
+            <table id="botones" class="table table-responsive">
+              <tr>
+                <td><button class="btn btn-default" id="p"type="button">P</button></td>
+                <td><button class="btn btn-default" id="q"type="button">Q</button></td>
+                <td><button class="btn btn-default" id="r"type="button">R</button></td>              
+              </tr>
+              <tr>
+                <td><button class="btn btn-default" id="s"type="button">S</button></td>
+                <td><button class="btn btn-default" id="!"type="button">¬</button></td>
+                <td><button class="btn btn-default" id="&" title="Conjuncion" type="button">^</button></td>              
+              </tr>
+              <tr>
+                <td><button class="btn btn-default" id="|" title="Inclusiva" type="button">v</button></td>
+                <td><button class="btn btn-default" id="+" title="Exclusiva" type="button">w</button></td>
+                <td><button class="btn btn-default" id=">" title="Condicional" type="button">→</button></td>              
+              </tr>
+              <tr>
+                <td><button class="btn btn-default" id="<" title="Bicondicional" type="button">↔</button></td>
+                <td><button class="btn btn-default" id="(" type="button">(</button></td>
+                <td><button class="btn btn-default" id=")" type="button">)</button></td>
+              </tr>
+              <tr>
+                <td><button class="btn btn-default" type="button">DEL</button></td>
+                <td><button class="btn btn-default" id="btnBorrar" type="button" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Borrar</button></td>                
+              </tr>
+              <tr>
+                <td colspan="3"><input class="btn btn-default" value="Resolver" id="btnResolver" type="button" onclick="generarTabla()" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"></td>
+              </tr>
+            </table>         
+          </div>
+        </div>                
+      </form>
+    </div>    
+  </section>
+  
+  <!-- TABLA -->
+  <section id="tabla">
+    <div class="container">
+      <h2 style="display: none;">Resultado: </h2>
+      <table class="table table-bordered" style="overflow-x:scroll;">
+        <thead id="simbolos">
+          <caption class="text-center" style="display: none"><h3>Tabla de la Verdad</h3></caption>
+        </thead>        
+        <tbody id="tabla_verdad">
+          
+        </tbody>
+      </table>
+      <!--Un boton vaciar tabla-->
+    </div>    
+  </section>
+
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  
+  <script src="js/main.js"></script>
+</body>
+
+</html>
