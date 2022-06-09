@@ -232,7 +232,7 @@ function ArbolExpresion() {
         var p = new Pila();//Y una pila
         var antesOperando = false;//Si hubo un antes operando
         this.Raiz = q;//El primero es la raiz
-        alert(Exp);
+        //alert(Exp);
         for (var i = 1; i < Exp.length; i++) {//Se recorre la expresion desde 1 porque ya se guardo la raiz el 0
             
             var aux2 = Exp[i]; //Se guarda el caracter en aux2
@@ -395,7 +395,7 @@ function Expresion(expr) {
         var n = sep.length - 1; //se carga la cantidad - 1
         var j = 0;
         var pfija = this.preFija();//Es un array
-        alert(pfija);
+        // alert(pfija);
         for (var i = 0; ((i < pfija.length) && (j <= n)); i++) {
             var e1 = pfija[i];
 
@@ -464,7 +464,7 @@ function Expresion(expr) {
             c = pre.sacar();
             expPre.push(c);
         }
-        alert("ExpPre" + expPre);
+        // alert("ExpPre" + expPre);
         return expPre;
     };
     //Se comprueba si existe el operador
